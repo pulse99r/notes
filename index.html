@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Notes</title>
+</head>
+<body>
+  <div class="header">
+    <div>Notes</div>
+    <div class="arrow-group">
+      <span class="down-arrow">&#x2304;</span>
+    </div>
+  </div>
+  <div class="notes-container">
+    <article class="article-01">
+      <h3 id="article-01-title">How to Phrase it Without Saying "You're Wrong!"</h3>
+      <div id="article-01-points" class="hide">
+        Expressing alternative ideas, processes, and methods assertively without making others feel like they're wrong requires careful communication. Here are some tips:
+        <ol>
+          <li>
+            Use "I" Statements**: Instead of saying "you should do this", say "I suggest" or "I believe". This shifts the focus from what the other person is doing wrong to what you believe could be done differently.
+          </li>
+          <li>
+            Acknowledge Other Views**: Before presenting your alternative, acknowledge the current method or idea. You might say something like, "I understand that currently we are doing X, and it has been effective in these ways...".
+          </li>
+          <li>
+            Present Alternatives as Options**: Introduce your alternative as another option to consider, rather than the only correct way. For example, you could say, "One option we might consider is...".
+          </li>
+          <li>
+            Use Positive Language**: Frame your alternative in a positive light. For example, instead of saying "This process is too slow", you could say "We might speed up the process by...".
+          </li>
+          <li>
+            Explain the Benefits**: Clearly outline the benefits of your alternative idea, process, or method. If possible, provide evidence or examples to support your points.
+          </li>
+          <li>
+            Be Open to Discussion**: Make it clear that you're open to discussion and feedback about your alternative. Encourage others to ask questions and share their thoughts.
+          </li>
+          <li>
+            Avoid Absolute Terms**: Avoid using words like "always", "never", "best", or "worst". These words can make your alternative seem like the only correct option, which can be off-putting.
+          </li>
+        </ol>
+
+        Remember, the goal is to communicate your ideas in a way that is respectful of others' opinions and open to collaboration.
+      </div>
+    </article>
+    <article>
+      <h3 id="article-02-title">Agreement vs Alignment</h3>
+      <div id="article-02-points" class="hide">
+        <ol>
+          <li>Strong relationships don't need agreement. They need alignment.</li>
+          <li>Agreement is having identical opinions.  Alignment is having shared values.</li>
+          <li>Agreement is taking the same path.  Alignment is heading in the same direction</li>
+          <li>Closeness is a matter of commitment, not consensus.</li>
+          <img src="https://media.licdn.com/dms/image/D4E22AQHdlKFJZVAQfQ/feedshare-shrink_800/0/1698766867391?e=1701907200&v=beta&t=kqX_WtwBMNizUWywsCU9m2uMekehMYNTHUOPY27qvZU">
+          <p>from Adam Grant on LinkedIn</p></img>
+        </ol>
+      </div>
+    </article>
+    <article class="article-03">
+      <h3 id="article-03-title">HTML Notes</h3>
+      <div id="article-03-points" class="hide">
+        <ol>
+          <li>Notes about HTML go here!</li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-04">
+      <h3 id="article-04-title">CSS Notes</h3>
+      <div id="article-04-points" class="hide">
+        <ol>
+          <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">article h3:hover {<br>
+            &emsp;&emsp;cursor: pointer;<br>
+            &emsp;&emsp;background-color: black;<br>
+            &emsp;&emsp;color:antiquewhite;<br>
+            &emsp;}<br></span><span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br>
+          <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">div div p {<br>
+            &emsp;&emsp;color: blue;<br>
+            &emsp;}<br></span><span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-05">
+      <h3 id="article-05-title">JavaScript Notes</h3>
+      <div id="article-05-points" class="hide">
+        <ol>
+          <li><span class="bold">How to show/hide toggling of the body of the articles was achieved </span><br>
+            <span><img id="code-script-01" src="./code-script-01.png" alt="Image of code">
+            </span><br>
+            <span>The primary effect provided by this code snippet is the show/hide toggle effect, which is achieved with the <span class="bold">if</span> statement starting on line #12.  When a given heading is clicked, if the value of the variable <span class="bold ital">hidden</span> is falsey, this means the text associated with the clicked heading is currently hidden, and the first part of the if statement is then true and that code is executed, setting the class attribute of the text to <span class="bold">show</span>, which applies CSS to set visibility: visible. If the value of the variable <span class="bold ital">hidden</span> is truthy, this means the text associated with the clicked heading is currently visible, and the <span class="bold">else clause</span>of the if statement is executed.</span>
+          </li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-06">
+      <h3 id="article-06-title">Express Coding for Backend Servers</h3>
+      <div id="article-06-points" class="hide">
+        <ol>
+          <li>Express notes go here!</li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-07">
+      <h3 id="article-07-title">SQL Cheatsheet</h3>
+      <div id="article-07-points" class="hide">
+        <ol>
+          <li><span class="bold">Creates Database Schema adding one or more tables: </span><br>
+            psql -U postgres -f db/schema.sql</li>
+            <br>
+            <li><span class="bold">Seeds the tables with some data:  </span><br>
+            psql -U postgres -f db/seed.sql<br>
+            <span>
+            ** note that both “schema.sql” and “seed.sql” are files files that were created with the parameters necessary to create the schema and seed data, respectively.
+          </span><br>
+          <br>
+          </li>
+          <li>
+          <span class="bold">
+            Example contents of schema.sql:
+          </span><br>
+          <span>
+            CREATE TABLE songs (      // <span class="bold red">&lt;</span>— creates a table called “songs”<br>
+             id SERIAL PRIMARY KEY,   // <span class="bold red">&lt;</span>— creates a column labeled “id” which is an automatically generated number, and set it as primary key<br>
+             name TEXT NOT NULL,    // <span class="bold red">&lt;</span>— creates a column for TEXT labeled “name” and require that the column be filled in for each row or record<br>
+             artist TEXT NOT NULL,   // <span class="bold red">&lt;</span>— ibid for a column labeled “artist”<br>
+             album TEXT,                    // <span class="bold red">&lt;</span>— creates a column labeled “album”, optionally filled in <br>
+             time TEXT,                        // <span class="bold red">&lt;</span>—  creates a column labeled “time”, optionally filled in <br>
+             is_favorite BOOLEAN       // <span class="bold red">&lt;</span>—  creates a column labeled “is_favorite”, must be of type BOOLEAN and optionally filled in<br>
+            );<br>
+          </span><br>
+          <span class="bold">
+            Contents of seed.sql:
+          </span><br>
+          <span>
+            INSERT INTO songs (name, artist, album, time, is_favorite) VALUES   // <span class="bold red">&lt;</span>— assigns the order of the column headers<br>
+            // data below must appear in the order of the column headers above, must match the data types and <em class="bold">must</em> include values where they are required<br>
+            // Note that the “id” is automatically generated (due to the use of the SERIAL keyword) and is not included in the data rovided below:<br>
+            // Each row (record) is enclosed in parentheses, and separated by commas.<br>
+            // The value for each column is enclosed in single quotes and separated by commas within the parentheses.<br>
+            <br>
+            ('Like A Virgin', 'Madonna', 'Like A Virgin', '3:38', true),<br>
+            ('While My Guitar Gently Weeps', 'Beatles', 'The Beatles - White Album', '4:46', true),<br>
+            ('Fool In The Rain', 'Led Zeppelin', 'In Through The Out Door', '6:08', true),<br>
+            ('Penny Lane', 'Beatles', ' Magical Mystery Tour', '3:03', true),<br>
+            ('Stairway To Heaven', 'Led Zeppelin','The Song Remains The Same', '3:03', true),<br>
+            ('Crazy For You', 'Madonna','Vision Quest', '4:04', true),<br>
+            ('All Too Well', 'Taylor Swift','Red', '4:04', true),<br>
+            ('We Are Never Ever Getting Back Together', 'Taylor Swift','Red', '3:12', true),<br>
+            ('Flowers', 'Miley Cyrus','Endless Summer Vacation', '3:21', true),<br>
+            ('Lose Yourself', 'Eminem','8 Mile', '5:20', true),<br>
+            ('New York State of Mind', 'Billy Joel','Turnstiles', '6:00', true)%</li><br>
+          </span><br>
+      </div>
+    </article>
+    <article class="article-08">
+      <h3 id="article-08-title">React Cheatshet</h3>
+      <div id="article-08-points" class="hide">
+        <ol>
+          <li>Express notes go here!</li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-09">
+      <h3 id="article-09-title">PERN Concepts</h3>
+      <div id="article-09-points" class="hide">
+        <ol>
+          <li><span class="bold">PERN</span> is an acronymn for <span class="bold und">P</span>ostgreSQL, <span class="bold und">E</span>xpress, <span class="bold und">R</span>eact and <span class="bold und">N</span>ode</li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-10">
+      <h3 id="article-10-title">Data Structures</h3>
+      <div id="article-10-points" class="hide">
+        <ol>
+          <li>Notes on Data Structures go here!</li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-11">
+      <h3 id="article-11-title">Web Development Roles</h3>
+      <div id="article-11-points" class="hide">
+        <ol>
+          <li><span class="bold">Front-End Web Developer</span> - A front-end web developer primarily uses HTML & CSS and JavaScript coding languages to build websites that are responsive, user-friendly, and interactive.  Front-End Web Developer average salary: <span class="bold">$72,117</span>.</li>
+          <li><span class="bold">Web Designer</span> - A web designer is responsible for a website’s appearance. This role requires proficiency in graphic design software (i.e. Adobe Illustrator and Photoshop) in order to design website layouts. These designs are then handed off to a web developer to be built - though some web designers may have front-end skills (i.e. HTML, CSS, and JavaScript) so they can also develop and implement their designs.  Web Designer average salary: <span class="bold">$56,280</span>.</li>  
+          <li><span class="bold">Full-Stack Developer</span> - A full-stack developer is proficient in working with both front-end and back-end coding languages. With their diverse skill set, they are able to work on every step of the web development process, including prototyping and programming browsers, servers, and databases. Full-Stack Developer average salary: <span class="bold">$75,970</span>.</li>  
+          <li><span class="bold">WordPress or Shopify Developer </span>- A <span class="ital">WordPress</span> or <span class="ital">Shopify</span> developer specializes exclusively in developing custom themes for clients using WordPress or Shopify, two of the world’s most popular Content Management Systems (CMS). Clients can range from a big-time marketing agency revamping their website, to an independent clothing store trying e-commerce for the first time as a result of COVID-19, to a travel blogger looking to spruce up their personal website. WordPress Developer average salary: <span class="bold">$63,790</span>.  Shopify Software Developer average salary: <span class="bold">$106,457</span>.
+          </li>  
+          <li><span class="bold">Web Analyst</span> - A web analyst works on the web development team, and uses data analytics to track and identify trends in website user behavior and interaction. Their primary goal is to draw conclusions from this data in order to strategize and improve a website’s design, user experience, and conversions.  Web Analyst average salary: <span class="bold">$81,279</span>.</li>  
+          <li><span class="bold">UX Designer/Developer</span> - A UX designer is in charge of a product or service's user experience. It is their job to ensure that the functionality is smooth, accessible, and intuitive to the user's needs and behaviors. This involves conducting research and proposing strategies, designing wireframes and prototypes, and testing a product. UX designers often work closely with developers and designers, and/or have development/design knowledge, themselves.  UX Designer average salary: <span class="bold">$80,720</span>.</li>  
+          <li><span class="bold">Technical Consultant</span> - A technical consultant works with a company or client to strategize how to optimize their technological processes while also reducing costs. They often use their technical expertise to troubleshoot and resolve technical issues, test applications, and make recommendations for long-term security and maintenance strategies based on best practices in the industry.  Technical Consultant average salary: <span class="bold">$78,706.</span></li>  
+        </ol>
+      </div>
+    </article>
+    <article class="article-12">
+      <h3 id="article-12-title">How To Build A Carousel</h3>
+      <div id="article-12-points" class="hide carousel-container">
+        <ol id="carousel">
+          <li class="carousel-item left-arrow">&lt;</li>
+          <li class="carousel-item"><a href="#">Number 1</a></li>
+          <li class="carousel-item"><a href="#">Number 2</a></li>
+          <li class="carousel-item"><a href="#">Number 3</a></li>
+          <li class="carousel-item"><a href="#">Number 4</a></li>
+          <li class="carousel-item hide"><a href="#">Number 5</a></li>
+          <li class="carousel-item hide"><a href="#">Number 6</a></li>
+          <li class="carousel-item hide"><a href="#">Number 7</a></li>
+          <li class="carousel-item hide"><a href="#">Number 8</a></li>
+          <li class="carousel-item hide"><a href="#">Number 9</a></li>
+          <li class="carousel-item hide"><a href="#">Number 10</a></li>
+          <li class="carousel-item right-arrow">&gt;</li>
+        </ol>
+      </div>
+    </article>
+  </div>
+  </div>
+</body>
+</html>
