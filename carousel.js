@@ -1,89 +1,78 @@
-let data = ['item 1', 'item 2', 'item 3','item 4', 'item 5', 'item 6', 'item 7', 'item 8', 'item 9', 'item 10', 'item 11', 'item 12', 'item 13', 'item 14', 'item 15'];
- 
-let folder = './img/'; 
+
+// preset upto 100 images from the ./img folder
+let folder = `./img/Kenti`; 
 let image = folder
+let images = []
 
-
-let carousel = []
-let start = 0
-let end = start + 4
-let calls = 0
-for (let i=start; i<end; i++){
-  carousel.push(data[i])
+for (let i = 0; i < 100; i++){
+  images.push(folder+i+ '.jpg')
 }
-console.log('Initial Carousel ===>',carousel)
-const move = (dir) => {
-  calls += 1
-  carousel = []
-  let index = 0
-  let count = 4;
-  if(dir === 'right'){
-    start += 1
-    index = start
-    end = start + 4;
-    for (let i=start; i< end; i++){
-      if (end < data.length - 1 && count >= 0){
-        carousel.push(data[index])
-        index += 1
-        count -= 1
-      } else {
-        index = data.indexOf(data.length-1) - 4
-      }
-    }
-  }
-  if(dir === 'left'){
-    start = data.indexOf(carousel[0]) > 0 ? data.indexOf(carousel[0]) : 0;
-    index = start
-    end = start + 4;
-    for (let i=start; i< end; i++){
-      if (end < data.length - 1 && count >= 0){
-        carousel.push(data[index])
-        index += 1
-        count -= 1
-      } else {
-        index = 0
-      }
-    }
-  }
+
+// DOM setup for images
+let carouselArr = document.getElementById('carousel')
+
+const createCarouselImgGroup =(element)=>{
+  let liElement = document.createElement('li')
+  let imgElement = document.createElement('img')
+  liElement.setAttribute('class', 'carousel-item')
+  imgElement.setAttribute('src', element)
+  liElement.appendChild(imgElement)
+  carouselArr.appendChild(liElement)
   
-  console.log(calls,dir,carousel)
-  return carousel
+  return carouselArr
 }
 
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('right')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('left')
-move('right')
+// New Test Code
+const setCarousel = (start) => {
+  let finish = start + 4;
+  let carouselWindow = []
+  carouselWindow[0] = images[start]
+  carouselWindow[1] = images[start + 1]
+  carouselWindow[2] = images[start + 2]
+  carouselWindow[3] = images[start + 3]
+  carouselWindow[4] = images[start + 4]
+  return carouselWindow
+}
+
+
+let begin = 0;
+let carouselWindow = setCarousel(begin)
+carouselWindow.forEach((element)=>{createCarouselImgGroup(element)})
+
+let leftArrow = document.getElementById('left')
+let rightArrow = document.getElementById('right');
+
+
+leftArrow.addEventListener('click',(event) => {
+  event.preventDefault();
+  begin--
+  if (begin < 0 ){
+    begin = 0
+    // leftArrow.setAttribute('class', 'left-arrow-zero')
+    leftArrow.setAttribute('class','carousel-item, left-arrow, left-arrow-zero')
+  } else {
+    leftArrow.removeAttribute("left-arrow-zero")
+    carouselArr.innerHTML = ""
+    let carouselWindow = setCarousel(begin)
+    carouselWindow.forEach((element)=>{createCarouselImgGroup(element)})
+  }
+})
+
+rightArrow.addEventListener('click',(event) => {
+  event.preventDefault()
+  carouselArr = document.getElementById('carousel')
+  begin++
+  if (begin >= 0 && begin + 5 < 31){
+    rightArrow.removeAttribute("right-arrow-zero")
+    carouselArr.innerHTML = ""
+    let carouselWindow = setCarousel(begin)
+    carouselWindow.forEach((element)=>{createCarouselImgGroup(element)})
+  } else {
+    rightArrow.setAttribute('class', 'carousel-item, right-arrow, right-arrow-zero')
+    begin = images.length - 5;
+    carouselArr.innerHTML = ""
+    let carouselWindow = setCarousel(begin)
+    carouselWindow.forEach((element)=>{createCarouselImgGroup(element)})
+  }
+})
+

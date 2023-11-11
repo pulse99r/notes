@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="carousel.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="carousel.css">
   <title>Notes</title>
 </head>
 <body>
@@ -78,7 +80,30 @@
             &emsp;}<br></span><span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br>
           <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">div div p {<br>
             &emsp;&emsp;color: blue;<br>
-            &emsp;}<br></span><span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li>
+            &emsp;}<br></span><span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br>
+            <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li>
+          <li><span class="bold">Child Selector</span><span> -- ul &gt; li - selects all the &lt;li&gt; elements the are direct children of a &lt;ul&gt; elements.</span></li><br>
+            <li><span class="bold">Attribute Selector --</span><span> <br><span class="ital">input[required] {<br>
+            &emsp;&emsp;color: blue;<br>
+            &emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br>
+          <li><span class="bold">Pseudo Class Selector</span><br><span class="ital">a:hover {<br>
+            &emsp;&emsp;color: blue;<br>
+            &emsp;&emsp;text-decoration: underline;<br>
+            &emsp;}<br></span> -- When the mouse hovers over the selected &lt;at&gt; tag element the blue color and underline styling will be applied.</span></li><br>
+          <li><span class="bold">Pseudo Element Selector</span><br>
+            <span class="ital">p::before {<br>
+            &emsp;&emsp;content: ">> ";<br>
+            &emsp;}<br></span> -- selects part of an element to be styled.  For example this adds content (two greater than symbols and a space) before each element.</span></li><br>
+          <li><span class="bold">Grouping Selector</span><br>
+            <span class="ital">h1, h2, h3 {<br>
+            &emsp;&emsp;font-family: Gill Sans", sans-serif; <br>
+            &emsp;}<br></span> -- Separated by commas, selectors target multiple elements to be styled.  For example this styles the font for each &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; element.</span></li><br>
+          <li><span class="bold">Universal Selector</span><br>
+            <span class="ital">* {<br>
+            &emsp;&emsp;margin: 0; <br>
+            &emsp;&emsp;padding: 0; <br>
+            &emsp;}<br></span> -- Allows us to select all elements on in the DOM.  This example sets the margins and padding for all element to zero.</span></li><br>
+
         </ol>
       </div>
     </article>
@@ -196,20 +221,20 @@
     <article class="article-12">
       <h3 id="article-12-title">How To Build A Carousel</h3>
       <div id="article-12-points" class="hide carousel-container">
-        <ol id="carousel">
-          <li class="carousel-item left-arrow">&lt;</li>
-          <li class="carousel-item"><a href="#">Number 1</a></li>
-          <li class="carousel-item"><a href="#">Number 2</a></li>
-          <li class="carousel-item"><a href="#">Number 3</a></li>
-          <li class="carousel-item"><a href="#">Number 4</a></li>
-          <li class="carousel-item hide"><a href="#">Number 5</a></li>
-          <li class="carousel-item hide"><a href="#">Number 6</a></li>
-          <li class="carousel-item hide"><a href="#">Number 7</a></li>
-          <li class="carousel-item hide"><a href="#">Number 8</a></li>
-          <li class="carousel-item hide"><a href="#">Number 9</a></li>
-          <li class="carousel-item hide"><a href="#">Number 10</a></li>
-          <li class="carousel-item right-arrow">&gt;</li>
-        </ol>
+        <li class="carousel-item left-arrow" id="left">&lt;</li>
+        <ul id="carousel">
+         
+        </ul>
+        <li class="carousel-item right-arrow" id="right">&gt;</li>
+      </div>
+    </article>
+    <article class="article-13">
+      <h3 id="article-13-title">Test of adding multiple classes to an HTML Node</h3>
+      <div id="article-13-points" class="hide">
+        <p>This is a test of the emergency broadcasting system.  Had this been an actual emergency, you would have been told where to go to kiss your ass goodbye!</p>
+       
+        <p>This is a test of the emergency broadcasting system.  Had this been an actual emergency, you would have been told where to go to kiss your ass goodbye!</p>
+       
       </div>
     </article>
   </div>
