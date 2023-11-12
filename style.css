@@ -17,11 +17,13 @@ body {
 }
 .down-arrow {
   color: gray;
+  visibility: hidden;
 }
-.up-arrow:hover, .down-arrow:hover {
-  color: gold;
+.down-arrow:hover {
+  color: white;
   cursor: pointer;
   font-size: 1.2em;
+  visibility:visible;
 }
 h3 {
   margin: 0;
