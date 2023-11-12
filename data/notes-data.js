@@ -16,7 +16,21 @@ const data = [
   3: `Agreement is taking the same path. Alignment is heading in the same direction`,
   4: `Closeness is a matter of commitment, not consensus.`
   },
-  {topic: 'HTML Notes'},
+  {
+    topic: 'HTML Notes',
+    basic: {1: 'Basic Structure of an HTMl File',
+      2: './img/basic-html.png'},
+      tags: {description: 'The structure of HTML Tags typically have an opening an a closing tag.  For example the opening paragraph tag looks like "<p>" and the closing paragraph tag looks like "</p>.  The "p" stands for "paragraph". and both the opening and closing tags are surrounded by the less-than and greater-than symbols ',
+      header: ['h1, h2, h3, h4, h5, h6','There are six levels of header text with h1 being the largest font and h6 being the smallest'],
+      paragraph: ['<p> ...</p> ','Paragraphs make it easier to organize paragraphs on a web page.  Paragraph tags by default has a line-space after the paragraph.'],
+      a: ['<a href="http://www.url.com">title for url</a>', 'The anchor tag creates a link that links to a resource on the web.'],
+      div: '<div> ... </div> ',
+      span: '<span> ... </span>',
+      }
+  } 
+  
+
+
   {topic: 'CSS Notes'},
   {topic: 'JavaScript Notes'},
   {topic: 'Express Coding for Backend Servers'},
