@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
   background-color: rgb(124, 149, 149);
 }
-.header h1 {
+.header {
   padding-left: 10px;
 }
 .arrow-group {

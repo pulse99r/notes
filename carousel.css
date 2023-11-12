@@ -49,9 +49,10 @@ ul {
   justify-content: center;
   color: black;
   height: 100px;
-  margin-left: 6px;
+  margin: auto;
   text-decoration: none;
   width: 90%;
+  height: 150px;
 }
 .left-arrow, .right-arrow {
   text-align: center;
