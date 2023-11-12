@@ -1,4 +1,25 @@
 let hidden = false;
+let createNewTag = (elem,attrib,attribValue) => {
+  element = document.createElement(elem);
+  element.setAttribute(attrib,attribValue);
+  return element;
+}
+
+const navItemArray = ['About', "Add Items"];
+
+const createNav = () => {
+  let navMenu = document.querySelector('#nav')
+  navItemArray.forEach( (item)=>{
+  let newTag = createNewTag('li','class','nav-item')
+  newTag.innerHTML = item
+  navMenu.appendChild(newTag)
+  })
+return navMenu;
+}
+
+console.log('createNav()',createNav())
+// let testNewTag = createNewTag('p','class',"new-parag")
+// console.log('testNewTag',testNewTag)
 
 const getElement = (elementId) => {
   let articleToShow = document.getElementById(elementId)

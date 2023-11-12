@@ -4,7 +4,42 @@ body {
   background-color: rgb(124, 149, 149);
 }
 .header {
+  padding: 0;
+  margin: 0;
+}
+.header h1 {
+  display: flex;
+  flex-direction:column;
   padding-left: 10px;
+}
+#nav {
+  border: 2px gray solid;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 5px 0;
+  width: 80%;
+}
+.nav-item {
+  background-color: gray;
+  border: 2px gray solid;
+  border-radius: 8px;
+  color: rgb(66, 59, 59);
+  font-size: 15px;
+  padding: 2px 20px 2px 20px;
+  margin: 0 5px 0 5px;
+  text-align: center;
+  width: 90px;
+}
+.nav-item:hover {
+  background-color: black;
+  border: 2px gray solid;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px 20px;
+  margin: 2 5px 2 5px;
 }
 .arrow-group {
   align-items: flex-end;
@@ -48,6 +83,7 @@ ul, ol {
 .header, .notes-container {
   width: 80%;
   margin: auto;
+  margin-top: 15px;
 }
 .header {
   font-size: 3em;
