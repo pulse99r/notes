@@ -106,6 +106,10 @@ article ol, article ul {
 .bold {
   font-weight: 600;
 }
+.bullet {
+  /* list-style: circle; */
+  list-style-type: square;
+}
 .ital {
   font-style: italic;
 }
@@ -134,6 +138,13 @@ article ol, article ul {
 img {
   width: 70%;
 }
+ol img {
+  margin-top: 15px;
+}
+.indent{
+  margin-left: 20px;
+}
+
 #code-script-01 {
   width: 95%;
 }

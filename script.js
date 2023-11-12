@@ -23,11 +23,18 @@ console.log('createNav()',createNav())
 // console.log('testNewTag',testNewTag)
 
 const about = document.querySelector('#about')
+const xAbout = document.querySelector('#close')
 const aboutWindow = document.querySelector('#about-window')
 aboutShow = false
 about.addEventListener('click',(event)=>{
   event.preventDefault()
   console.log('About Clicked')
+  aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
+  aboutShow = !aboutShow
+})
+xAbout.addEventListener('click',(event)=>{
+  event.preventDefault()
+  console.log('xAbout Clicked!!')
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
   aboutShow = !aboutShow
 })
