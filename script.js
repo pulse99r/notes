@@ -11,6 +11,7 @@ const createNav = () => {
   let navMenu = document.querySelector('#nav')
   navItemArray.forEach( (item)=>{
   let newTag = createNewTag('li','class','nav-item')
+  newTag.id = item === "About" ? 'about' : ""
   newTag.innerHTML = item
   navMenu.appendChild(newTag)
   })
@@ -21,6 +22,16 @@ console.log('createNav()',createNav())
 // let testNewTag = createNewTag('p','class',"new-parag")
 // console.log('testNewTag',testNewTag)
 
+const about = document.querySelector('#about')
+const aboutWindow = document.querySelector('#about-window')
+aboutShow = false
+about.addEventListener('click',(event)=>{
+  event.preventDefault()
+  console.log('About Clicked')
+  aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
+  aboutShow = !aboutShow
+})
+
 const getElement = (elementId) => {
   let articleToShow = document.getElementById(elementId)
   return articleToShow
@@ -30,9 +41,10 @@ const showArticle = (event) => {
   event.preventDefault
   let clickedId = event.target
   let targetElement = getElement(clickedId.nextElementSibling.id)
-  if(clickedId.nextElementSibling.id !== 'carousel') {
+  if(clickedId.nextElementSibling.id !== 'carousel' 
+      && clickedId !== 'about' ) {
     if(!hidden ){
-      console.log('targetElement.classList:', targetElement.classList)
+      //console.log('targetElement.classList:', targetElement.classList)
       targetElement.removeAttribute('show')
       targetElement.setAttribute('class',`hide ${targetElement.classList.value.includes('carousel-container') ? 'carousel-container': "" }`)
       hidden = true;
