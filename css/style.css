@@ -3,28 +3,34 @@
   top: 18%;
   right: 12%;
 }
-
+#about-window {
+  border-radius: 8px;
+}
 div .about-header-container {
   background-color: gray;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   height: 59px;
   margin: 2px 0 0 18px;
   position: absolute;
   width: 88%;
 }
 .about-header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   font-size: 3em;
   margin: 5px 0 0 25px;
 }
 #close {
   border: 1px solid gray;
   font-size: 1.2em;
-  padding: 3px 1px;
+  padding: 3px 3px;
   position: absolute;
   right: 47px;
-  top: 13px;
+  top: 14px;
 }
 #close:hover {
-  background-color: gray;
+  background-color: rgb(91, 78, 55);
   color: orange;
   cursor: pointer;
 }
