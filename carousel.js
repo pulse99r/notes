@@ -45,7 +45,7 @@ let rightArrow = document.getElementById('right');
 
 leftArrow.addEventListener('click',(event) => {
   event.preventDefault();
-  begin--
+  begin -= 4
   if (begin < 0 ){
     begin = 0
     // leftArrow.setAttribute('class', 'left-arrow-zero')
@@ -61,7 +61,7 @@ leftArrow.addEventListener('click',(event) => {
 rightArrow.addEventListener('click',(event) => {
   event.preventDefault()
   carouselArr = document.getElementById('carousel')
-  begin++
+  begin += 4
   if (begin >= 0 && begin + 5 < 31){
     rightArrow.removeAttribute("right-arrow-zero")
     carouselArr.innerHTML = ""

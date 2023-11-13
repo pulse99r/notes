@@ -27,9 +27,9 @@ const data = [
       html: ['<html> ... </html>', 'The html tag envelopes the entire html document.  It tells the browser that the page should be interpreted as html'],
       head: ['<head> ... </head>', `The head area of HTML files contains meta information which DO NOT show up on the html page. Toms of the most noticeable items in the head are the link to CSS files, the connection to a javascript script file, links to fonts, a title which is displayed on the browser's tab`],
       body: ['<body> ... </body>', 'The body contains all the information that actually gets displayed on the web page'],
-      header: ['h1, h2, h3, h4, h5, h6','There are six levels of header text with h1 being the largest font and h6 being the smallest'],
-      paragraph: ['<p> ...</p> ','Paragraphs make it easier to organize paragraphs on a web page.  Paragraph tags by default has a line-space after the paragraph.'],
-      a: ['<a href="http://www.url.com">title for url</a>', 'The anchor tag creates a link that links to a resource on the web.'],
+      headings: ['h1, h2, h3, h4, h5, h6','There are six levels of header text with h1 being the largest font and h6 being the smallest'],
+      paragraph: ['<p> ...</p> ','Paragraphs make it easier to organize paragraphs on a web page.  A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after the paragraph.'],
+      links: ['<a href="http://www.url.com">title for url</a>', 'The anchor tag creates a link that connects (or links) to a resource on the web.'],
       div: ['<div> ... </div> ', 'The "div" tag allows information to be separated into divisions for organizational purposes.'],
       span: ['<span> ... </span>'],
       article: ['<article> ... </article>'],
@@ -41,6 +41,19 @@ const data = [
       th: ['<th> ... </th>','The table header tag is used to define the header row in tables in an HTML document.'],
       tr: ['<tr> ... </tr>','The table row tag is used to define rows in the body of HTML tables.'],
       form: ['<form> ... </form>','HTML forms are used to collect user input, which is sent to some place for storage.'],
+      blockElements: {description: 'A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. A block-level element always takes up the full width available (stretches out to the left and right as far as it can).',elements: ['<address>', '<article>', '<aside>', '<blockquote>', '<canvas>', '<dd>', '<div>', '<dl>', '<dt>', '<fieldset>', '<figcaption>', '<figure>', '<footer>', '<form>', '<h1>-<h6>', '<header>', '<hr>', '<li>', '<main>', '<nav>', '<noscript>', '<ol>', '<p>', '<pre>', '<section>', '<table>', '<tfoot>', '<ul>', '<video>', '</video>']},
+      inlineElements: {description: 'An inline element does not start on a new line.  An inline element only takes up as much width as necessary.', elements: ['<a>', '<abbr>', '<acronym>', '<b>', '<bdo>', '<big>', '<br>', '<button>', '<cite>', '<code>', '<dfn>', '<em>', '<i>', '<img>', '<input>', '<kbd>', '<label>', '<map>', '<object>', '<output>', '<q>', '<samp>', '<script>', '<select>', '<small>', '<span>', '<strong>', '<sub>', '<sup>', '<textarea>', '<time>', '<tt>', '<var>']},
+      layoutElements: {
+        header: '<header> - Defines a header for a document or a section',
+        nav: '<nav> - Defines a set of navigation links'
+        section: '<section> - Defines a section in a document'
+        article: '<article> - Defines an independent, self-contained content'
+        aside: '<aside> - Defines content aside from the content (like a sidebar)'
+        footer: '<footer> - Defines a footer for a document or a section'
+        details: '<details> - Defines additional details that the user can open and close on demand'
+        summary: '<summary> - Defines a heading for the <details> element'
+      }
+
       
     },
     attributes: {
