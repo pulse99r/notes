@@ -1,3 +1,22 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(124, 149, 149);
+}
+.header-container {
+  position: fixed;
+  top: 5px;
+  margin-bottom: 200px;
+  width: 90%;
+}
+.header {
+  padding: 0;
+  margin: 0;
+}
+.header h1 {
+  display: flex;
+  flex-direction:column;
+  padding-left: 10px;
+}
 .about {
   position:absolute;
   top: 18%;
@@ -34,18 +53,9 @@ div .about-header-container {
   color: orange;
   cursor: pointer;
 }
-body {
-  font-family: sans-serif;
-  background-color: rgb(124, 149, 149);
-}
-.header {
-  padding: 0;
-  margin: 0;
-}
-.header h1 {
-  display: flex;
-  flex-direction:column;
-  padding-left: 10px;
+.page-intro {
+  margin-top: 70px;
+  width: 80%;
 }
 #nav {
   border: 2px gray solid;
@@ -76,14 +86,19 @@ body {
   padding: 2px 20px;
   margin: 2 5px 2 5px;
 }
+.footer {
+  /* width: 90%; */
+}
 #footer-nav{
+  align-items: flex-end;
+  background-color:aquamarine;
   display: flex;
   flex-direction: row;
   margin: auto;
   padding: 5px 0;
-  position: absolute;
+  position: fixed;
   bottom: 5px;
-  width: 100%;
+  width: 80%;
 }
 .footer-nav-item {
   color: rgb(66, 59, 59);
@@ -208,7 +223,9 @@ ol img {
 #code-script-01 {
   width: 95%;
 }
-
+.space {
+  height: 100px;
+}
 @media (min-width: 950px){
   img {
     width: 70%;

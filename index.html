@@ -12,7 +12,7 @@
   <title>My Class Notes</title>
 </head>
 <body>
-  <div >
+  <div class="header-container" >
     <h1 class="header">My Class Notes</h1>
     <ul id="nav">
       <!-- Nav items go here -->
@@ -21,7 +21,14 @@
       <span class="down-arrow">&#x2304;</span>
     </div> -->
   </div>
+  <div class="space">
+    <!-- Empty div for creating space at the bottom of the page -->
+  </div>
   <div class="notes-container">
+    <div class="page-intro">
+      <p>These are some of the awesome things I've learned over the past couple of years from my studies at Fullstack Academy, Udacity, Pursuit and of course YouTube. To be fair, I did a lot of work in the Pursuit program, which although not perfect, it is rigorous and I learned a good deal about Fullstack Software Engineering. I also learned a lot about Frontend Engineering from Udacity, where I completed the Frontend Web development NanoDegree Program.</p>
+    </div>
+    
     <article class="article-01">
       <h3 id="article-01-title">How to Phrase it Without Saying "You're Wrong!"&emsp;&emsp;<span class="down-arrow">&#x2304;</span></h3>
       <div id="article-01-points" class="hide">
@@ -86,9 +93,9 @@
           <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">div div p {<br>
             &emsp;&emsp;color: blue;<br>
             &emsp;}<br></span><span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br>
-            <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li>
+          <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li><br>
           <li><span class="bold">Child Selector</span><span> -- ul &gt; li - selects all the &lt;li&gt; elements the are direct children of a &lt;ul&gt; elements.</span></li><br>
-            <li><span class="bold">Attribute Selector --</span><span> <br><span class="ital">input[required] {<br>
+          <li><span class="bold">Attribute Selector --</span><span> <br><span class="ital">input[required] {<br>
             &emsp;&emsp;color: blue;<br>
             &emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br>
           <li><span class="bold">Pseudo Class Selector</span><br><span class="ital">a:hover {<br>
@@ -249,6 +256,12 @@
         </iframe>
       </div>
     </article>
+    <article class="article-15">
+      <h3 id="article-15-title">Great idea doesn't always translate into a great product ...</h3>
+      <div id="article-15-points" class="hide">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qdplq4cj76I?si=dLkzLe9vNOkYaiUB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </article>
     <div id="about-window" class="hide about">
       <div class="about-header-container">
         <span class="about-header">About</span>
@@ -264,6 +277,9 @@
         <li class="footer-nav-item">About</li>
         <li class="footer-nav-item">Add Items</li>
       </ul>
+    </div>
+    <div class="space">
+      <!-- Empty div for creating space at the bottom of the page -->
     </div>
   </div>
 </body>
