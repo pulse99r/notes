@@ -8,6 +8,12 @@
   position: absolute;
   top: 2px;
 }
+/* .about {
+  position:absolute;
+  top: 18%;
+  right: 12%;
+} */
+
 .border01 {
   border: 2px solid gray;
   border-radius: 8px;
@@ -17,7 +23,12 @@
   width: 70%;
 }
 .container {
-  margin-top: 50px;
+  margin-top: 57px;
+  width: 90%;
+}
+.container h3 {
+  margin: 0;
+  padding: 0;
 }
 .banner {
   align-items: center;
@@ -28,23 +39,19 @@
   padding: 0 10px 0 10px;
   margin-bottom: 5px;
 }
-#close {
+/* #close {
   border: 1px solid gray;
   font-size: 1.2em;
   position: absolute;
   top: 23px;
   right: 2%;
-}
-#close:hover {
+} */
+/* #close:hover {
   background-color: gray;
   color: orange;
   cursor: pointer;
-}
-.about {
-  position:absolute;
-  top: 18%;
-  right: 12%;
-}
+} */
+
 .show{
   /* background-color: rgb(161, 176, 176);
   border: 2px gray solid;
