@@ -121,9 +121,32 @@
         </ol>
       </div>
     </article>
-    <article class="article-05">
-      <h3 id="article-05-title">JavaScript Notes</h3>
-      <div id="article-05-points" class="hide">
+    <article class="article-05-01">
+      <h3 id="article-05-01-title">JavaScript Basics</h3>
+      <div id="article-05-01-points" class="hide">
+        <ol>
+          <li><span class="bold">Variables - containers for storing data</span><br>
+            <span>JavaScript Variables can be declared in 4 ways:
+            </span><br>
+            <span>
+              - Automatically<br>
+              - Using var<br>
+              - Using let<br>
+              - Using const<br></span><br>
+              <span>As a practice, the 'automatic' and 'var' declaration methods are not recommended, because they open the code up to errors: Automatic assignment, var and let all allow the value of the variable to be reassigned later in the same scope.  However, <span>automatic</span> and <span>var</span> allow the variable to be reassigned, which increases the possibility of coding errors.</span>
+              <span>Use of 'let' and 'const' is recommended because once declared, variables with let and const cannot be re-declared in the same scope. In addition, the values of variables declared with 'let' can be reassigned, while variables declared with 'const' remain constant.</span><br><br>
+          </li>
+          <li><span class="bold">How to show/hide toggling of the body of the articles was achieved </span><br>
+            <span><img id="code-script-01" src="./img/code-script-01.png" alt="Image of code">
+            </span><br>
+            <span>The primary effect provided by this code snippet is the show/hide toggle effect, which is achieved with the <span class="bold">if</span> statement starting on line #12.  When a given heading is clicked, if the value of the variable <span class="bold ital">hidden</span> is falsey, this means the text associated with the clicked heading is currently hidden, and the first part of the if statement is then true and that code is executed, setting the class attribute of the text to <span class="bold">show</span>, which applies CSS to set visibility: visible. If the value of the variable <span class="bold ital">hidden</span> is truthy, this means the text associated with the clicked heading is currently visible, and the <span class="bold">else clause</span>of the if statement is executed.</span>
+          </li>
+        </ol>
+      </div>
+    </article>
+    <article class="article-05-02">
+      <h3 id="article-05-02-title">JavaScript Notes</h3>
+      <div id="article-05-02-points" class="hide">
         <ol>
           <li><span class="bold">How to show/hide toggling of the body of the articles was achieved </span><br>
             <span><img id="code-script-01" src="./img/code-script-01.png" alt="Image of code">
