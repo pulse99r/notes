@@ -5,20 +5,20 @@ let createNewTag = (elem,attrib,attribValue) => {
   return element;
 }
 
-const navItemArray = ['About', "Add Items", "Contact"];
+const navItemArray = ['Home','About', "Add Items", "Contact"];
 
 const createNav = () => {
   let navMenu = document.querySelector('#nav')
   navItemArray.forEach( (item)=>{
   let newTag = createNewTag('li','class','nav-item')
-  newTag.id = item === "About" ? 'about' : ""
-  newTag.innerHTML = item
+  newTag.id = item === "About" ? 'about' : item === 'Home' ? "home": ""
+  newTag.innerHTML = item === 'Home' ? `<a href='./index.html'>Home</a>` : item
   navMenu.appendChild(newTag)
   })
 return navMenu;
 }
 createNav()
-
+const nav = document.querySelector('#nav')
 const about = document.querySelector('#about')
 const xAbout = document.querySelector('#close')
 const aboutWindow = document.querySelector('#about-window')
@@ -27,6 +27,13 @@ const container = document.querySelector('.notes-container')
 const articles = container.getElementsByTagName('article')
 
 aboutShow = false
+
+nav.addEventListener('click', (event) =>{
+  event.preventDefault();
+  console.log('Nav Event.target', event.target)
+  
+
+})
 about.addEventListener('click',(event)=>{
   event.preventDefault()
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
