@@ -248,6 +248,25 @@ ol img {
 .space100 {
   height: 100px;
 }
+@media (max-width: 650px){
+  img {
+    width: 80%;
+  }
+  #code-script-01 {
+    width: 90%;
+  }
+  #footer-nav{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: fixed;
+    bottom: 5px;
+    width: 90%;
+  }
+  .footer-copy {
+    justify-content: flex-end;
+  }
+}
 @media (min-width: 950px){
   img {
     width: 70%;

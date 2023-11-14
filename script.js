@@ -5,7 +5,7 @@ let createNewTag = (elem,attrib,attribValue) => {
   return element;
 }
 
-const navItemArray = ['About', "Add Items"];
+const navItemArray = ['About', "Add Items", "Contact"];
 
 const createNav = () => {
   let navMenu = document.querySelector('#nav')
@@ -17,36 +17,37 @@ const createNav = () => {
   })
 return navMenu;
 }
-
-console.log('createNav()',createNav())
-// let testNewTag = createNewTag('p','class',"new-parag")
-// console.log('testNewTag',testNewTag)
+createNav()
 
 const about = document.querySelector('#about')
 const xAbout = document.querySelector('#close')
 const aboutWindow = document.querySelector('#about-window')
+
+const container = document.querySelector('.notes-container')
+// console.log('container',container)
+const articles = container.getElementsByTagName('article')
+// console.log('articles',articles)
+
 aboutShow = false
 about.addEventListener('click',(event)=>{
   event.preventDefault()
-  console.log('About Clicked')
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
   aboutShow = !aboutShow
 })
 xAbout.addEventListener('click',(event)=>{
   event.preventDefault()
-  console.log('xAbout Clicked!!')
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
   aboutShow = !aboutShow
 })
-
 const getElement = (elementId) => {
   let articleToShow = document.getElementById(elementId)
   return articleToShow
   
 }
+
 const showArticle = (event) => {
-  event.preventDefault
-  let clickedId = event.target
+  // event.preventDefault
+  let clickedId = event
   let targetElement = getElement(clickedId.nextElementSibling.id)
   if(clickedId.nextElementSibling.id !== 'carousel' 
       && clickedId !== 'about' ) {
@@ -64,7 +65,14 @@ const showArticle = (event) => {
   }
 }
 
-document.onload = document.addEventListener('click',showArticle)
-
-// let clickedId = document.getElementById('article-01-title');
-// let targetElement = document.getElementById('article-01-points');
+// ---- New event listener ---- 
+for (let i = 0; i < articles.length; i++) {
+  articles[i].addEventListener('click',(event) => {
+    event.preventDefault()
+    const element = event.target
+    // let targetElement = getElement(element.nextElementSibling.id)
+    console.log('element',event.target)
+    showArticle(element)
+  })
+}
+let targetElement = document.getElementById('article-01-points');
