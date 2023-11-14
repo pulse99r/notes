@@ -24,9 +24,7 @@ const xAbout = document.querySelector('#close')
 const aboutWindow = document.querySelector('#about-window')
 
 const container = document.querySelector('.notes-container')
-// console.log('container',container)
 const articles = container.getElementsByTagName('article')
-// console.log('articles',articles)
 
 aboutShow = false
 about.addEventListener('click',(event)=>{
@@ -46,7 +44,6 @@ const getElement = (elementId) => {
 }
 
 const showArticle = (event) => {
-  // event.preventDefault
   let clickedId = event
   let targetElement = getElement(clickedId.nextElementSibling.id)
   if(clickedId.nextElementSibling.id !== 'carousel' 
@@ -71,7 +68,6 @@ for (let i = 0; i < articles.length; i++) {
     event.preventDefault()
     const element = event.target
     // let targetElement = getElement(element.nextElementSibling.id)
-    console.log('element',event.target)
     showArticle(element)
   })
 }

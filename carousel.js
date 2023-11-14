@@ -48,7 +48,6 @@ leftArrow.addEventListener('click',(event) => {
   begin -= 4
   if (begin < 0 ){
     begin = 0
-    // leftArrow.setAttribute('class', 'left-arrow-zero')
     leftArrow.setAttribute('class','carousel-item, left-arrow, left-arrow-zero')
   } else {
     leftArrow.removeAttribute("left-arrow-zero")
