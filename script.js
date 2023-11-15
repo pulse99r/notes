@@ -31,8 +31,6 @@ aboutShow = false
 nav.addEventListener('click', (event) =>{
   event.preventDefault();
   console.log('Nav Event.target', event.target)
-  
-
 })
 about.addEventListener('click',(event)=>{
   event.preventDefault()

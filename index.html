@@ -86,37 +86,72 @@
     <article class="article-04">
       <h3 id="article-04-title">CSS Notes</h3>
       <div id="article-04-points" class="hide">
-        <ol>
-          <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">article h3:hover {<br>
-            &emsp;&emsp;cursor: pointer;<br>
-            &emsp;&emsp;background-color: black;<br>
-            &emsp;&emsp;color:antiquewhite;<br>
-            &emsp;}<br></span><span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br>
-          <li><span class="bold">Selecting nested elements using CSS styling:</span><br><span class="ital">div div p {<br>
-            &emsp;&emsp;color: blue;<br>
-            &emsp;}<br></span><span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br>
+        <ol><li>
+          <span class="bold">Selectors</span><br><br>
+          <span>CSS selectors determine which HTML elements on the web page is selected for styling.  There are three primary types of selectors:  TagName, ClassName, and ID.  TagNames are the same as the names of the html tags that appear in opening tags, such as &lt;<b>p</b>&gt;, &lt;<b>h1</b>&gt;, &lt;<b>a</b>&gt;, &lt;<b>ul</b>&gt;, or &lt;<b>main</b>&gt;, to name a few. The three primary selectors are:</span><br><br>
+          &emsp;&emsp;- Tag Name Selector<br>
+          &emsp;&emsp;- Class Name Selector<br>
+          &emsp;&emsp;- ID Selector<br><br>
+          &emsp;&emsp;<span class="bold">- TagName</span><br>
+          &emsp;&emsp;&emsp;&emsp;<span>- <b>Example:</b> This h1 CSS Rule will be applied to every &lt;<b>h1</b>&gt; tag on the web page.</span><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i>h1 { <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; color: 'blue'; <br><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</i></span><br>
+          <hr>
+          &emsp;&emsp;<span class="bold">- Class Name</span><br>
+          &emsp;&emsp;&emsp;&emsp;<span>- <b>Example:</b> CSS class names are arbitrary names placed in the opening HTML tags, for example, given this HTML: <br><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HTML: <i>&lt;h1 <b>class="heading"</b>&gt;My Page Header&lt;/h1&gt;</i><br><br>
+            &emsp;&emsp;&emsp;&emsp;This CSS rule will be applied to every element on the web page that has a class of ".heading"</span><br><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.heading { <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; border: 2px solid purple;<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;} </span><br>
+            <hr>
+          &emsp;&emsp;<span class="bold">- ID</span><br>
+          &emsp;&emsp;&emsp;&emsp;<span>- <b>Example:</b> CSS id names are arbitrary names, and similar to class names are placed in the opening HTML tags, for example, given this HTML: <br><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HTML: <i>&lt;article <b>id="article-02"</b>&gt;Agreement vs Alignment&lt;/h1&gt;</i><br><br>
+            &emsp;&emsp;&emsp;&emsp;ID's need to be unique to the web page. This CSS Rule will apply the styling  only to the specific HTML element with the '#article-02' id.</span><br><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;#article-02 { <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; background-color: lightblue; <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;} </span><br><br>
+  
+        </li><hr><br>
+        <li><span class="bold">Selecting nested elements using CSS styling:</span><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">article h3:hover {<br>
+            <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cursor: pointer;<br>
+              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;background-color: black;<br>
+                <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color:antiquewhite;<br>
+                  <span>&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span><span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br><br>
+        <li><span class="bold">Selecting nested elements using CSS styling:</span><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">div div p {</span><br>
+            <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;</span><br>
+              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</span><br>
+          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br>
           <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li><br>
           <li><span class="bold">Child Selector</span><span> -- ul &gt; li - selects all the &lt;li&gt; elements the are direct children of a &lt;ul&gt; elements.</span></li><br>
-          <li><span class="bold">Attribute Selector --</span><span> <br><span class="ital">input[required] {<br>
-            &emsp;&emsp;color: blue;<br>
-            &emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br>
-          <li><span class="bold">Pseudo Class Selector</span><br><span class="ital">a:hover {<br>
-            &emsp;&emsp;color: blue;<br>
-            &emsp;&emsp;text-decoration: underline;<br>
-            &emsp;}<br></span> -- When the mouse hovers over the selected &lt;at&gt; tag element the blue color and underline styling will be applied.</span></li><br>
-          <li><span class="bold">Pseudo Element Selector</span><br>
-            <span class="ital">p::before {<br>
-            &emsp;&emsp;content: ">> ";<br>
-            &emsp;}<br></span> -- selects part of an element to be styled.  For example this adds content (two greater than symbols and a space) before each element.</span></li><br>
+          <li><span class="bold">Attribute Selector --</span><span> <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">input[required] {<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br>
+          <li><span class="bold">Pseudo Class Selector</span><br>
+            <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">a:hover {<br>
+              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;<br>
+                <span>&emsp;&emsp;&emsp;&emsp;&emsp;text-decoration: underline;<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;}<br> 
+            -- When the mouse hovers over the selected &lt;at&gt; tag element the blue color and underline styling will be applied.</span></li><br>
+          <li><span class="bold">Pseudo <u>Element</u> Selector</span><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">p::before {<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content: ">> ";<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects part of an element to be styled.  For example this adds content (two greater than symbols and a space) before each element.</span></li><br>
           <li><span class="bold">Grouping Selector</span><br>
-            <span class="ital">h1, h2, h3 {<br>
-            &emsp;&emsp;font-family: Gill Sans", sans-serif; <br>
-            &emsp;}<br></span> -- Separated by commas, selectors target multiple elements to be styled.  For example this styles the font for each &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; element.</span></li><br>
+            &emsp;&emsp;&emsp;&emsp;<span class="ital">h1, h2, h3 {<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;font-family: Gill Sans", sans-serif; <br>
+              &emsp;&emsp;&emsp;&emsp;}</span><br> -- Separated by commas, selectors target multiple elements to be styled.  For example this styles the font for each &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; element.</span></li><br>
           <li><span class="bold">Universal Selector</span><br>
-            <span class="ital">* {<br>
-            &emsp;&emsp;margin: 0; <br>
-            &emsp;&emsp;padding: 0; <br>
-            &emsp;}<br></span> -- Allows us to select all elements on in the DOM.  This example sets the margins and padding for all element to zero.</span></li><br>
+            &emsp;&emsp;&emsp;&emsp;<span class="ital"><b>*</b> {<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;margin: 0; <br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;padding: 0; <br>
+              &emsp;&emsp;&emsp;&emsp;}</span><br> 
+              -- Allows us to select all elements on in the DOM.  This example sets the margins and padding for all element to zero.</span></li><br>
 
         </ol>
       </div>
@@ -136,10 +171,15 @@
               <span>As a practice, the 'automatic' and 'var' declaration methods are not recommended, because they open the code up to errors: Automatic assignment, var and let all allow the value of the variable to be reassigned later in the same scope.  However, <span>automatic</span> and <span>var</span> allow the variable to be reassigned, which increases the possibility of coding errors.</span>
               <span>Use of 'let' and 'const' is recommended because once declared, variables with let and const cannot be re-declared in the same scope. In addition, the values of variables declared with 'let' can be reassigned, while variables declared with 'const' remain constant.</span><br><br>
           </li>
-          <li><span class="bold">How to show/hide toggling of the body of the articles was achieved </span><br>
-            <span><img id="code-script-01" src="./img/code-script-01.png" alt="Image of code">
-            </span><br>
-            <span>The primary effect provided by this code snippet is the show/hide toggle effect, which is achieved with the <span class="bold">if</span> statement starting on line #12.  When a given heading is clicked, if the value of the variable <span class="bold ital">hidden</span> is falsey, this means the text associated with the clicked heading is currently hidden, and the first part of the if statement is then true and that code is executed, setting the class attribute of the text to <span class="bold">show</span>, which applies CSS to set visibility: visible. If the value of the variable <span class="bold ital">hidden</span> is truthy, this means the text associated with the clicked heading is currently visible, and the <span class="bold">else clause</span>of the if statement is executed.</span>
+          <li>
+            <span>Examples</span><br>
+            &emsp;&emsp;<span>a = 5;</span> (automatic declaration)<br>
+            &emsp;&emsp;<span>var b = 5;</span> (declaration using var)<br>
+            &emsp;&emsp;<span>c = a + b;</span> (automatic declaration)<br>
+            <br>
+            &emsp;&emsp;<span> const c = a + b;</span> (automatic declaration)<br> 
+            &emsp;&emsp;<span>x = a + b;</span> (automatic declaration)<br>
+
           </li>
         </ol>
       </div>
