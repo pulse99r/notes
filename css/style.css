@@ -19,7 +19,7 @@ body {
   height: 70px;
   justify-content: left;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 80%;
 }
 
@@ -73,7 +73,7 @@ div .about-header-container {
   display: flex;
   flex-direction: row;
   margin: auto;
-  padding: 5px 0;
+  padding: 3px 0;
   width: 80%;
 }
 .nav-item {
@@ -211,6 +211,9 @@ article ol, article ul {
   display: none;
   visibility: hidden;
 }
+.bg-01{
+  background-color: rgb(124, 149, 149);
+}
 .red {
   color: orangered;
 }
@@ -260,7 +263,7 @@ ol img {
     flex-direction: column;
     margin: auto;
     position: fixed;
-    bottom: 5px;
+    bottom: 1px;
     width: 90%;
   }
   .footer-copy {

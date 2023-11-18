@@ -14,7 +14,7 @@
 <body>
   <div class="header-container" >
     <h1 class="header">My Class Notes</h1>
-    <ul id="nav">
+    <ul id="nav" class="bg-01">
       <!-- Nav items go here -->
     </ul>
     <!-- <div class="arrow-group">
@@ -116,36 +116,37 @@
   
         </li><hr><br>
         <li><span class="bold">Selecting nested elements using CSS styling:</span><br>
-          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">article h3:hover {<br>
-            <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cursor: pointer;<br>
-              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;background-color: black;<br>
-                <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color:antiquewhite;<br>
-                  <span>&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span><span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br><br>
+            &emsp;&emsp;&emsp;&emsp;<span class="ital">article h3:hover {<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cursor: pointer;<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;background-color: black;<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color:antiquewhite;<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;}<br></span>
+            <span>This will select all the <span class="bold">level 3 header</span> elements (&lt;h3&gt;) within <span class="bold">&lt;article&gt;</span> elements and set these rules for their <span class="bold">:hover</span> properties.  The CSS declaration shown above is the one actually used to style the section headers (with the black background and white lettering) as shown  within this document</span></li><br><br>
         <li><span class="bold">Selecting nested elements using CSS styling:</span><br>
-          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">div div p {</span><br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">div div p {</span><br>
             <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;</span><br>
-              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</span><br>
-          <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br>
-          <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li><br>
-          <li><span class="bold">Child Selector</span><span> -- ul &gt; li - selects all the &lt;li&gt; elements the are direct children of a &lt;ul&gt; elements.</span></li><br>
-          <li><span class="bold">Attribute Selector --</span><span> <br>
+            <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</span><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<span>This will select all the paragraph (&lt;p&gt;) elements within a &lt;div&gt;, within a &lt;div&gt;</span></li><br><hr>
+          <li><span class="bold">Adjacent Sibling Selector</span> -- <span>h1 + p - selects the first &lt;p&gt; element directly following an &lt;h1&gt; tag.</span></li><br><hr>
+          <li><span class="bold">Child Selector</span><span> -- ul &gt; li - selects all the &lt;li&gt; elements the are direct children of a &lt;ul&gt; elements.</span></li><br><hr>
+          <li><span class="bold">Attribute Selector --</span><br>
             &emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">input[required] {<br>
               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;<br>
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects all the &lt;input&gt; elements with a 'required' attribute.</span></li><br><hr>
           <li><span class="bold">Pseudo Class Selector</span><br>
-            <span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">a:hover {<br>
-              <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;<br>
-                <span>&emsp;&emsp;&emsp;&emsp;&emsp;text-decoration: underline;<br>
-                  &emsp;&emsp;&emsp;&emsp;&emsp;}<br> 
-            -- When the mouse hovers over the selected &lt;at&gt; tag element the blue color and underline styling will be applied.</span></li><br>
+            &emsp;&emsp;&emsp;&emsp;<span class="ital">a:hover {<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: blue;<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;text-decoration: underline;<br>
+              &emsp;&emsp;&emsp;&emsp;}<br> 
+            -- When the mouse hovers over the selected &lt;at&gt; tag element the blue color and underline styling will be applied.</span></li><br><hr>
           <li><span class="bold">Pseudo <u>Element</u> Selector</span><br>
             &emsp;&emsp;&emsp;&emsp;&emsp;<span class="ital">p::before {<br>
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content: ">> ";<br>
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects part of an element to be styled.  For example this adds content (two greater than symbols and a space) before each element.</span></li><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content: ">> ";<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;}<br></span> -- selects part of an element to be styled.  For example this adds content (two greater than symbols and a space) before each element.</span></li><br><hr>
           <li><span class="bold">Grouping Selector</span><br>
             &emsp;&emsp;&emsp;&emsp;<span class="ital">h1, h2, h3 {<br>
               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;font-family: Gill Sans", sans-serif; <br>
-              &emsp;&emsp;&emsp;&emsp;}</span><br> -- Separated by commas, selectors target multiple elements to be styled.  For example this styles the font for each &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; element.</span></li><br>
+              &emsp;&emsp;&emsp;&emsp;}</span><br> -- Separated by commas, selectors target multiple elements to be styled.  For example this styles the font for each &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; element.</span></li><br><hr>
           <li><span class="bold">Universal Selector</span><br>
             &emsp;&emsp;&emsp;&emsp;<span class="ital"><b>*</b> {<br>
               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;margin: 0; <br>
@@ -200,7 +201,13 @@
       <h3 id="article-06-title">Express Coding for Backend Servers</h3>
       <div id="article-06-points" class="hide">
         <ol>
-          <li>Express notes go here!</li>
+          <li><span class="bold">Express Server Setyp</span>
+            <span>The server is the backend of your app</span><br>
+            <span>Craate a git repo</span><br>
+            <span>create the files: server.js, app.js, .env, and .gitignore. And for PostgreSQL, create a folder for the database config files (name the folder 'db', and inside create files named dbConfig.js, schema.sql, and seed.sql.  </span><br>
+            <span></span><br>
+            <span></span><br>
+          </li>
         </ol>
       </div>
     </article>
@@ -277,7 +284,11 @@
       <h3 id="article-10-title">Data Structures</h3>
       <div id="article-10-points" class="hide">
         <ol>
-          <li>Notes on Data Structures go here!</li>
+          <li><span class="bold">Six types of data structures</span>
+          <span class="bold">Array</span><span></span>
+          <span></span>
+          </li>
+
         </ol>
       </div>
     </article>
@@ -306,12 +317,24 @@
     </article>
     <article class="article-13">
       <h3 id="article-13-title">Example of an Image Carousel</h3>
+      <!-- Carousel built with for loop-->
       <div id="article-13-points" class="hide carousel-container">
         <li class="carousel-item left-arrow" id="left">&lt;</li>
         <ul id="carousel"> 
           <!-- Images will go here  -->
         </ul>
         <li class="carousel-item right-arrow" id="right">&gt;</li>
+      </div>
+      
+      <!-- Carousel built with linked list-->
+      <div id="article-13-points" class="hide carousel-container linked-list">
+        <li class="carousel-item left-arrow" id="left">&lt;</li>
+        <ul id="carousel"> 
+          <!-- Images will go here  -->
+        </ul>
+        <li class="carousel-item right-arrow" id="right">&gt;</li>
+      </div>
+ 
       </div>
     </article>
     <article class="article-14">
