@@ -1,4 +1,10 @@
+const toggleBool = (bool) => {
+  // function takes in a boolean and returns the same boolean with the opposite state
+  return !bool
+}
+
 let hidden = false;
+
 let createNewTag = (elem,attrib,attribValue) => {
   element = document.createElement(elem);
   element.setAttribute(attrib,attribValue);
@@ -17,6 +23,7 @@ const createNav = () => {
   })
 return navMenu;
 }
+
 createNav()
 const nav = document.querySelector('#nav')
 const about = document.querySelector('#about')
@@ -57,12 +64,12 @@ const showArticle = (event) => {
       //console.log('targetElement.classList:', targetElement.classList)
       targetElement.removeAttribute('show')
       targetElement.setAttribute('class',`hide ${targetElement.classList.value.includes('carousel-container') ? 'carousel-container': "" }`)
-      hidden = true;
+      hidden = toggleBool(hidden)
     } else {
       targetElement.removeAttribute('hide')
       // targetElement.setAttribute('class','show')
       targetElement.setAttribute('class',`show ${targetElement.classList.value.includes('carousel-container') ? 'carousel-container': "" }`)
-      hidden = false;
+      hidden = toggleBool(hidden)
     }
   }
 }
@@ -77,3 +84,6 @@ for (let i = 0; i < articles.length; i++) {
   })
 }
 let targetElement = document.getElementById('article-01-points');
+
+let filtered = ["A", "B", "C"].filter(element => element === "B");
+console.log('filtered ==>',filtered[0]) 

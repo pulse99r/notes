@@ -96,24 +96,35 @@ const data = [
     16: ['import', 'Declare names for values defined in other modules'],
     17: ['label', 'Give statement a name for use with break and continue'],
     18: ['let', 'Declare and initialize one or more block-scoped variables (ES6)'],
-    19: ['return', 'Return a value from a function'],
-    20: ['switch', 'Multi-path branch to "case" or "default:" labels'],
-    21: ['throw', 'Throw or execute an exception or error based on a condition'],
-    22: ['try_catch_finally',  'Handle exceptions and code cleanup'],
-    23: ['use_strict', 'Apply strict mode restrictions to script or function'],
-    24: ['var', 'Declare and initialize one or more variables (pre ES6)'],
-    25: ['while', 'A basic loop construct'],
-    26: [yield, 'Provide a vale to be iterated; only used in generator functions']
+    19: ['repeat', 'Syntax: repeat(n, function) -- repeats the function n times.'],
+    20: ['return', 'Return a value from a function'],
+    21: ['switch', 'Multi-path branch to "case" or "default:" labels'],
+    22: ['throw', 'Throw or execute an exception or error based on a condition'],
+    23: ['try_catch_finally',  'Handle exceptions and code cleanup'],
+    24: ['use_strict', 'Apply strict mode restrictions to script or function'],
+    25: ['var', 'Declare and initialize one or more variables (pre ES6)'],
+    26: ['while', 'A basic loop construct'],
+    27: [yield, 'Provide a vale to be iterated; only used in generator functions']
     },
     operators: ['+ (plus)', '- (minus)', '* (multiply)', '/ divide', '% (modulus)'],
     arrays: {
       array_methods: {
         map: {
           map_img: `../img/map-figure-01.png`,
+          map_syntax: `array.map((element) => {
+            console.log(element)
+          })`,
           map_description: ""
         },
+        filter: {
+          filter_img: '',
+          filter_syntax: '["A", "B", "C"].filter(element => element === "B");',
+          filter_description: `let filtered = ["A", "B", "C"].filter(element => element === "B"));
+          console.log(filtered[0]) // B`
+        },
         for_each: {
-
+          for_each_img: '',
+          for_each_syntax: '["A", "B"].forEach(element => console.log(element));' 
         }
       },
     },
