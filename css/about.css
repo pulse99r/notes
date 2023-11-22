@@ -39,26 +39,9 @@
   padding: 0 10px 0 10px;
   margin-bottom: 5px;
 }
-/* #close {
-  border: 1px solid gray;
-  font-size: 1.2em;
-  position: absolute;
-  top: 23px;
-  right: 2%;
-} */
-/* #close:hover {
-  background-color: gray;
-  color: orange;
-  cursor: pointer;
-} */
 
 .show{
-  /* background-color: rgb(161, 176, 176);
-  border: 2px gray solid;
-  border-radius: 5px;
-  box-shadow: rgba(136, 174, 180, 0.7) 12px 12px, rgba(4, 34, 39, 0.7) 10px 22px 22px;
-  margin-bottom: 22px;
-  padding-left: 4px; */
+
   visibility: visible;
 }
 .hide{
