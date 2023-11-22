@@ -185,7 +185,7 @@ h3 {
 }
 
 ul, ol {
-  list-style: none;
+  /* list-style: none; */
 }
 article {
   width: 87%;
@@ -210,6 +210,18 @@ article h3:hover {
 }
 article ol, article ul {
   font-size: 1.15em;
+}
+article ul li {
+  list-style-type:square;
+}
+#article-04-points ol,
+#article-05-02-points ol,
+#article-06-points ol, 
+#article-09-points ol,
+#article-12-points ul,
+#article-16-points ul {
+  list-style: none;
+  margin-left: 20px;
 }
 .bold {
   font-weight: 600;
