@@ -11,13 +11,13 @@ let createNewTag = (elem,attrib,attribValue) => {
   return element;
 }
 
-const navItemArray = ['Home','About', "Add Items", "Contact"];
+const navItemArray = ['Home','About', "Add Items", "Contact", 'Thanksgiving'];
 
 const createNav = () => {
   let navMenu = document.querySelector('#nav')
   navItemArray.forEach( (item)=>{
   let newTag = createNewTag('li','class','nav-item')
-  newTag.id = item === "About" ? 'about' : item === 'Home' ? "home": item == 'Add Items' ? 'add-items' : item === "Contact" ? 'contact' : ""
+  newTag.id = item === "About" ? 'about' : item === 'Home' ? "home": item == 'Add Items' ? 'add-items' : item === "Contact" ? 'contact' :   item === "Thanksgiving" ? 'tg-btn' : ""
   newTag.innerHTML = item === 'Home' ? `<a href='./index.html'>Home</a>` : item
   navMenu.appendChild(newTag)
   })
@@ -32,26 +32,46 @@ const addItems = document.querySelector('#add-items')
 const contactWindow = document.querySelector('#contact-window')
 const xAbout = document.querySelector('#close')
 const aboutWindow = document.querySelector('#about-window')
+const tgBtn = document.querySelector('#tg-btn')
 
 const container = document.querySelector('.notes-container')
 const articles = container.getElementsByTagName('article')
 
+
 let aboutShow = false;
 let contactShow = false;
+let tgShow = false;
 
 nav.addEventListener('click', (event) =>{
   event.preventDefault();
   console.log('Nav Event.target', event.target)
+  if(event.target.id === "happy_tg"){
+    console.log('The event target clicked is "about"!')
+    console.log(event.target.classList)
+  }
 })
+
 about.addEventListener('click',(event)=>{
   event.preventDefault()
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
   aboutShow = !aboutShow
 })
+
 xAbout.addEventListener('click',(event)=>{
   event.preventDefault()
   aboutWindow.classList = aboutShow ? 'about hide' : 'about show';
   aboutShow = !aboutShow
+})
+
+tgBtn.addEventListener('click',(event)=>{
+  event.preventDefault()
+  console.log('tgBtn Click Event', event.target)
+  const tgMsg = document.querySelector('#tg-msg')
+  let tgClass = tgMsg.classList
+  console.log('tg_class ===>>',tgClass)
+  // tgMsg.setAttribute('class',toggleBool(tgShow) ? 'hide':' show')
+  tgMsg.classList = tgShow ? 'hide' : 'show';
+  tgShow = toggleBool(tgShow)
 })
 
 contactWindow.addEventListener('click',(event) => {
@@ -63,7 +83,6 @@ contactWindow.addEventListener('click',(event) => {
 const getElement = (elementId) => {
   let articleToShow = document.getElementById(elementId)
   return articleToShow
-  
 }
 
 const showArticle = (event) => {
