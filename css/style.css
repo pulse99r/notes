@@ -1,6 +1,8 @@
 body {
   font-family: sans-serif;
   background-color: rgb(124, 149, 149);
+  background-image: url("./img/grad-cap.png");
+  width: 100%;
 }
 .header-container {
   position: fixed;
@@ -64,10 +66,6 @@ div .about-header-container {
   color: orange;
   cursor: pointer;
 }
-.page-intro {
-  margin-top: 70px;
-  width: 80%;
-}
 #nav {
   border: 2px gray solid;
   display: flex;
@@ -105,6 +103,30 @@ div .about-header-container {
   font-weight: 600;
   padding: 2px 20px;
   margin: 2 5px 2 5px;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.15em;
+  justify-content: space-evenly;
+  margin: 120px 20px 0 185px;
+  width: 80%;
+}
+.left {
+  margin-right: 10px;
+}
+.right {
+  margin-left: 10px;
+}
+.page-intro-col {
+  width: 50%;
+}
+.main-content {
+  border-top: 2px solid silver;
+  margin: auto 20px auto 185px;
+  padding-top: 20px;
+  width: 80%;
 }
 
 .footer-copy {
@@ -189,16 +211,19 @@ ul, ol {
   /* list-style: none; */
 }
 article {
-  width: 87%;
+  width: 100%;
 }
 article h3 {
   color:rgb(13, 79, 90);
   font-size: 1.2em;
-  width: 60%;
+  width: 80%;
+}
+.cheatsheet, .article-05-02a-points {
+  width: 100%;
 }
 .notes-container {
   margin-top: 10px;
-  margin: auto;
+  /* margin: auto; */
   width: 80%;
 }
 article h3:hover {
@@ -258,12 +283,26 @@ article ul li {
 .blue {
   color:rgb(39, 16, 215);
 }
+
+/* images */
 img {
   width: 70%;
 }
 ol img {
   margin-top: 15px;
 }
+.smiley {
+  padding-left: 5px;
+  height: 16px;
+  width: 15px;
+}
+/* .grad-cap {
+  width: 105px;
+  opacity: .5;
+  z-index: 2;
+} */
+/* - - - end of images - - -  */
+
 .indent{
   margin-left: 20px;
 }
