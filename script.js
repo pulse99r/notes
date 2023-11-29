@@ -11,7 +11,8 @@ let createNewTag = (elem,attrib,attribValue) => {
   return element;
 }
 
-const navItemArray = ['Home','About', "Add Items", "Contact"/*, Thanksgiving */];
+const navItemArray = ['Home','About', "Add Items", "Contact", 'Thanksgiving'];
+// const navItemArray = ['Home','About', "Add Items", "Contact"];
 
 const createNav = () => {
   let navMenu = document.querySelector('#nav')
