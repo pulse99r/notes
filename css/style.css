@@ -116,7 +116,7 @@ div .about-header-container {
   flex-direction: row;
   font-size: 1.15em;
   justify-content: space-evenly;
-  margin: 120px 20px 0 185px;
+  margin: 120px 9% 0 9%;
   width: 80%;
 }
 .left {
@@ -130,7 +130,7 @@ div .about-header-container {
 }
 .main-content {
   border-top: 2px solid silver;
-  margin: auto 20px auto 185px;
+  margin: auto 20px auto 9%;
   padding-top: 20px;
   width: 80%;
 }
@@ -145,12 +145,12 @@ div .about-header-container {
   display: flex;
   flex-direction: row;
   justify-content: baseline;
-  margin: auto;
-  margin-left: 10%;
+  margin: auto 9% 0 9%;
+  /* margin-left: 11%; */
   padding: 5px 0;
   position: fixed;
   bottom: 5px;
-  width: 60%;
+  width: 65%;
 }
 .footer-nav-item {
   color: rgb(15, 12, 12);
