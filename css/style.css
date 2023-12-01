@@ -1,7 +1,6 @@
 body {
   font-family: sans-serif;
   background-color: rgb(124, 149, 149);
-  background-image: url("./img/grad-cap.png");
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -10,11 +9,20 @@ body {
   justify-content: center;
   justify-items: center;
 }
+.grad-cap {
+  border-radius: 10px;
+  opacity: .15;
+  position: absolute;
+  top: 11vh;
+  left: 16vh;
+  width:70%;
+  z-index: 2;
+}
 .header-container {
   position: fixed;
   top: 5px;
   margin-bottom: 200px;
-  width: 90%;
+  min-width: 90%;
 }
 .header {
   align-items: center;
@@ -245,7 +253,7 @@ article ul li {
   list-style-type:square;
 }
 #article-04-points ol,
-#article-05-02-points ol,
+#article-05-02-point
 #article-06-points ol, 
 #article-09-points ol,
 #article-12-points ul,

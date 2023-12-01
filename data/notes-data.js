@@ -165,3 +165,5 @@ const data = [
   {topic: 'How to Build An Image Carousel'},
   {topic: 'Test of adding multiple classes to an HTML Node'}
 ]
+
+export default data;
