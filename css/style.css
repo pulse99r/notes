@@ -141,6 +141,7 @@ div .about-header-container {
   margin: auto 20px auto 9%;
   padding-top: 20px;
   width: 80%;
+  z-index: 1;
 }
 
 .footer-copy {
@@ -375,3 +376,7 @@ ol img {
     width: 70%;
   }
 }
+/* #test-area{
+border: 2px gray solid;
+background-color: bisque;
+} */

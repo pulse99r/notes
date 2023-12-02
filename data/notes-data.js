@@ -104,7 +104,7 @@ const data = [
     24: ['use_strict', 'Apply strict mode restrictions to script or function'],
     25: ['var', 'Declare and initialize one or more variables (pre ES6)'],
     26: ['while', 'A basic loop construct'],
-    27: [yield, 'Provide a vale to be iterated; only used in generator functions']
+    27: ['yield', 'Provide a vale to be iterated; only used in generator functions']
     },
     operators: ['+ (plus)', '- (minus)', '* (multiply)', '/ divide', '% (modulus)'],
     arrays: {
@@ -166,4 +166,43 @@ const data = [
   {topic: 'Test of adding multiple classes to an HTML Node'}
 ]
 
-export default data;
+/* *** Refactoring to have content be pulled from data object instead of hard-coded onto HTML page.                      *** */
+// console.log(data[0].topic,data[0].intro,data[0]["1"],data[0]["2"],data[0]["3"])
+let testArea = document.querySelector('.main-content')
+
+let topicArea = Object.keys(data)
+console.log('topicArea:', topicArea)
+let theTopic = data[0].topic;
+let theIntro = data[0].intro;
+
+console.log('Topic:', theTopic)
+console.log('Intro:', theIntro)
+
+let article = document.createElement('article')
+let h3 = document.createElement('h3')
+let articlePoints = document.createElement('div')
+let list = document.createElement('ol')
+
+h3.innerHTML = theTopic
+
+for(let j = 0; j < topicArea.length; j++) {
+  let topicAreaX = topicArea[j];
+  
+  for(let i = 0; i < topicAreaX.length; i++) {
+    
+    h3.setAttribute('id',`article-${i}-title`)
+    articlePoints.setAttribute('id',`article-${i}-points`)
+    
+    if(topicArea[i] !== 'topic' && topicAreaX[i] !== 'intro'){
+      let listItem = document.createElement('li')
+      listItem.innerHTML = data[0][topicAreaX[i]]
+      list.appendChild(listItem)
+      console.log(topicAreaX[i], data[0][topicAreaX[i]])
+    }
+  }
+  articlePoints.appendChild(list)
+  article.appendChild(h3)
+  article.appendChild(articlePoints)
+  testArea.appendChild(article)
+  articlePoints.setAttribute('class', 'hide')
+}
