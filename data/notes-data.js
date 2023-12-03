@@ -16,8 +16,7 @@ const data = [
   3: `Agreement is taking the same path. Alignment is heading in the same direction`,
   4: `Closeness is a matter of commitment, not consensus.`
   },
-  {
-    topic: 'HTML Notes',
+  {topic: 'HTML Notes',
     html_basic: ['Basic Structure of an HTMl File', './img/basic-html.png'],
     tags: {
       cheat_sheet_img: '../img/html-cheatsheet.png',
@@ -50,7 +49,8 @@ const data = [
       blockElements: {
         description: 'A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. A block-level element always takes up the full width available (stretches out to the left and right as far as it can).',
         elements: ['<address>', '<article>', '<aside>', '<blockquote>', '<canvas>', '<dd>', '<div>', '<dl>', '<dt>', '<fieldset>', '<figcaption>', '<figure>', '<footer>', '<form>', '<h1>-<h6>', '<header>', '<hr>', '<li>', '<main>', '<nav>', '<noscript>', '<ol>', '<p>', '<pre>', '<section>', '<table>', '<tfoot>', '<ul>', '<video>', '</video>']},
-      inlineElements: {description: 'An inline element does not start on a new line.  An inline element only takes up as much width as necessary.', elements: ['<a>', '<abbr>', '<acronym>', '<b>', '<bdo>', '<big>', '<br>', '<button>', '<cite>', '<code>', '<dfn>', '<em>', '<i>', '<img>', '<input>', '<kbd>', '<label>', '<map>', '<object>', '<output>', '<q>', '<samp>', '<script>', '<select>', '<small>', '<span>', '<strong>', '<sub>', '<sup>', '<textarea>', '<time>', '<tt>', '<var>']},
+      inlineElements: {description: 'An inline element does not start on a new line.  An inline element only takes up as much width as necessary.', elements: ['<a>', '<abbr>', '<acronym>', '<b>', '<bdo>', '<big>', '<br>', '<button>', '<cite>', '<code>', '<dfn>', '<em>', '<i>', '<img>', '<input>', '<kbd>', '<label>', '<map>', '<object>', '<output>', '<q>', '<samp>', '<script>', '<select>', '<small>', '<span>', '<strong>', '<sub>', '<sup>', '<textarea>', '<time>', '<tt>', '<var>']
+    },
       layoutElements: {
         // [ element name, description ]
       1: ['header', '<header> - Defines a header for a document or a section'],
@@ -63,7 +63,6 @@ const data = [
       8: ['summary', '<summary> - Defines a heading for the <details> element']
       }
 
-      
     },
     attributes: {
       class: 'Arbitrary names or labels that can be used in CSS to target HTML elements for the application of style',
@@ -72,8 +71,6 @@ const data = [
     }
   }, 
   
-
-
   {topic: 'CSS Notes'},
   {topic: 'JavaScript Basics',
     keywords:{
@@ -107,8 +104,8 @@ const data = [
     27: ['yield', 'Provide a vale to be iterated; only used in generator functions']
     },
     operators: ['+ (plus)', '- (minus)', '* (multiply)', '/ divide', '% (modulus)'],
-    arrays: {
-      array_methods: {
+    arrays: [
+      {array_methods: {
         map: {
           map_img: `../img/map-figure-01.png`,
           map_syntax: `array.map((element) => {
@@ -126,8 +123,9 @@ const data = [
           for_each_img: '',
           for_each_syntax: '["A", "B"].forEach(element => console.log(element));' 
         }
-      },
-    },
+      }
+    }
+    ],
     objects: {
       object_methods: {
         for_in: {
@@ -166,43 +164,44 @@ const data = [
   {topic: 'Test of adding multiple classes to an HTML Node'}
 ]
 
-/* *** Refactoring to have content be pulled from data object instead of hard-coded onto HTML page.                      *** */
+/* *** Refactoring to have content be pulled from the above data object instead of hard-coded onto HTML page.               *** */
 // console.log(data[0].topic,data[0].intro,data[0]["1"],data[0]["2"],data[0]["3"])
 let testArea = document.querySelector('.main-content')
 
-let topicArea = Object.keys(data)
-console.log('topicArea:', topicArea)
-let theTopic = data[0].topic;
-let theIntro = data[0].intro;
 
-console.log('Topic:', theTopic)
-console.log('Intro:', theIntro)
-
-let article = document.createElement('article')
-let h3 = document.createElement('h3')
-let articlePoints = document.createElement('div')
-let list = document.createElement('ol')
-
-h3.innerHTML = theTopic
-
-for(let j = 0; j < topicArea.length; j++) {
-  let topicAreaX = topicArea[j];
+for(let i = 0; i < data.length; i++) {
+  let topicArea = Object.keys(data)
+  console.log('topicArea:', topicArea.topic)
+  let topicAreaX = topicArea[i];
+  let theTopic = topicAreaX.topic;
+  let theIntro = topicAreaX.intro ? topicAreaX.intro : "";
   
-  for(let i = 0; i < topicAreaX.length; i++) {
+  console.log('Topic:', theTopic)
+  console.log('Intro:', theIntro)
+  
+  let article = document.createElement('article')
+  let h3 = document.createElement('h3')
+  let articlePoints = document.createElement('div')
+  let list = document.createElement('ol')
+  
+  h3.innerHTML = theTopic
+  for(let j = 0; j < topicAreaX.length; j++) {
     
-    h3.setAttribute('id',`article-${i}-title`)
-    articlePoints.setAttribute('id',`article-${i}-points`)
+    // h3.innerHTML = topicAreaX.topic
+    h3.setAttribute('id',`article-${j}-title`)
+    articlePoints.setAttribute('id',`article-${j}-points`)
     
-    if(topicArea[i] !== 'topic' && topicAreaX[i] !== 'intro'){
+    if(topicArea[i] !== 'topic' && topicAreaX[j] !== 'intro'){
       let listItem = document.createElement('li')
-      listItem.innerHTML = data[0][topicAreaX[i]]
+      listItem.innerHTML = data[0][topicAreaX[j]]
       list.appendChild(listItem)
-      console.log(topicAreaX[i], data[0][topicAreaX[i]])
+      console.log(topicAreaX[j], data[0][topicAreaX[j]])
     }
   }
   articlePoints.appendChild(list)
   article.appendChild(h3)
   article.appendChild(articlePoints)
   testArea.appendChild(article)
-  articlePoints.setAttribute('class', 'hide')
+  // articlePoints.setAttribute('class', 'hide')
+  article.setAttribute('class', 'hide')
 }

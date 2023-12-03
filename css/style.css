@@ -226,6 +226,9 @@ h3 {
 article {
   width: 100%;
 }
+article div{
+  padding-right: 23px;
+}
 article h3 {
   color:rgb(13, 79, 90);
   font-size: 1.2em;
