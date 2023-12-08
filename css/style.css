@@ -102,15 +102,18 @@ div .about-header-container {
 }
 .nav-item > a {
   text-decoration: none;
+  color: rgb(66, 59, 59);
+  /* text-underline-offset: none; */
 }
-.nav-item a:hover {
+#home a:hover {
+  color:antiquewhite;
   text-decoration: none;
 }
 
-.nav-item:hover {
+#home :hover {
   /* background-color: orange; */
   /* border: 2px gray solid; */
-  border: 2px antiquewhite solid;
+  border: 1px antiquewhite solid;
   color:antiquewhite;
   border-radius: 8px;
   cursor: pointer;
