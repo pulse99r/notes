@@ -3,13 +3,11 @@ body {
   background-color: rgb(124, 149, 149);
   display: flex;
   flex-direction: column;
+  margin: auto;
   width: 90%;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  
 }
-.grad-cap {
+/* .grad-cap {
   border-radius: 10px;
   opacity: .15;
   position: absolute;
@@ -17,7 +15,7 @@ body {
   left: 16vh;
   width:70%;
   z-index: 2;
-}
+} */
 .header-container {
   position: fixed;
   top: 5px;
@@ -127,7 +125,7 @@ div .about-header-container {
   flex-direction: row;
   font-size: 1.15em;
   justify-content: space-evenly;
-  margin: 120px 9% 0 9%;
+  margin: 120px auto 0 auto;
   width: 80%;
 }
 .left {
@@ -227,7 +225,9 @@ h3 {
 }
 
 article {
-  width: 100%;
+  border-bottom: 1px gray solid;
+  margin: auto;
+  width: 70%;
 }
 article div{
   padding-right: 23px;
@@ -242,7 +242,7 @@ article h3 {
 }
 .notes-container {
   margin-top: 10px;
-  /* margin: auto; */
+  margin: auto;
   width: 90%;
 }
 article h3:hover {
@@ -252,6 +252,7 @@ article h3:hover {
   color:antiquewhite;
   font-size: 1.3em;
   padding-left: 3px;
+  width: 100%;
 }
 article ol, article ul {
   font-size: 1.15em;
@@ -386,3 +387,6 @@ ol img {
 border: 2px gray solid;
 background-color: bisque;
 } */
+.bullet a{
+  z-index: 5;
+}

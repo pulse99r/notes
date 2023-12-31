@@ -69,9 +69,8 @@ const data = [
       '3.03.02': 'Arbitrary names or labels that can be used in CSS to target HTML elements for the application of style'
     }
   }, 
-  
-  {'3.04': 'CSS Notes'},
-  {'3.05': {'3.05.0':'JavaScript Basics',
+  '3.04': 'CSS Notes',
+  '3.05': {'3.05.0':'JavaScript Basics',
       // [ JS keyword, Description ]
     1: ['break', 'Exit from the innermost loop or switch or from a named enclosing statement'],
     2: ['case', 'Label for a statement within a switch statement'],
