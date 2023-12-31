@@ -234,7 +234,7 @@ article div{
 }
 article h3 {
   color:rgb(13, 79, 90);
-  font-size: 1.2em;
+  font-size: 2.5em;
   width: 80%;
 }
 .cheatsheet, .article-05-02a-points {
@@ -250,7 +250,7 @@ article h3:hover {
   /* background-color: orange; */
   border: 2px antiquewhite solid;
   color:antiquewhite;
-  font-size: 1.3em;
+  font-size: 3.2em;
   padding-left: 3px;
   width: 100%;
 }
@@ -295,7 +295,15 @@ article ul li {
   visibility: hidden;
 }
 .bg-01{
+  /* background-color: rgb(124, 149, 149);
+  background-color: rgb(153, 168, 168); */
+  border-radius: 8px;
+  padding: 8px 0 8px 5px;
+}
+.bg-02{
   background-color: rgb(124, 149, 149);
+  background-color: rgb(153, 168, 168);
+  border-radius: 8px;
 }
 .red {
   color: orangered;
